@@ -1,0 +1,13 @@
+[user]
+	name  = corpsee
+	email = poisoncorpsee@gmail.com
+[credential]
+	helper = cache --timeout=3600
+[alias]
+	ch = checkout
+	mg = merge --no-ff
+	lg = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ll = log ORIG_HEAD.. --stat --no-merges
+[core]
+	autocrlf = input
+	safecrlf = true
