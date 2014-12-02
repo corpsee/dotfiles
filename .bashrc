@@ -75,6 +75,8 @@ unset use_color safe_term match_lhs
 #    ;;
 #esac
 
+export TERM=xterm-256color
+
 # enable bash completion in interactive shells
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
@@ -93,6 +95,15 @@ if [ -x /usr/lib/command-not-found ]; then
 	}
 fi
 
-TERM=xterm-256color
+export HISTTIMEFORMAT="%h %d %H:%M:%S "
+export HISTSIZE=5000
+export HISTFILESIZE=5000
+export HISTCONTROL=ignorespace:erasedups
+export HISTIGNORE="ls:ps:cd:history:exit:mc"
+
+shopt -s histappend
+shopt -s cmdhist
+
+PROMPT_COMMAND="history -a"
 
 /usr/bin/mint-fortune
