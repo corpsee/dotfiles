@@ -9,5 +9,6 @@
 	lg = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	ll = log ORIG_HEAD.. --stat --no-merges
 [core]
-	autocrlf = input
-	safecrlf = true
+	autocrlf   = input
+	safecrlf   = true
+	whitespace = trailing-space,space-before-tab
