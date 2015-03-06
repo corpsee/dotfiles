@@ -8,6 +8,7 @@ ignore   = ~/.hgignore
 color   =
 extdiff =
 strip   =
+churn   =
 
 [extdiff]
 cmd.diff = meld
