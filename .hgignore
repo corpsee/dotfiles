@@ -1,0 +1,11 @@
+# syntax: glob | regexp
+syntax: glob
+
+# editors
+.idea
+.DS_Store
+
+# PHP
+vendor
+composer.phar
+

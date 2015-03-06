@@ -1,2 +1,13 @@
 [ui]
 username = corpsee <poisoncorpsee@gmail.com>
+editor   = mcedit
+
+ignore   = ~/.hgignore
+
+[extensions]
+color   =
+extdiff =
+strip   =
+
+[extdiff]
+cmd.diff = meld

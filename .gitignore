@@ -1,1 +1,7 @@
+# editors
 /.idea
+/.DS_Store
+
+# PHP
+/composer.phar
+/vendor
