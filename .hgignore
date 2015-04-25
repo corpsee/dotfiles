@@ -8,3 +8,6 @@ syntax: glob
 # PHP
 vendor
 composer.phar
+
+# logs
+*.log
