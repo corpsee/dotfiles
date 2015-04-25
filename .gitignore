@@ -5,3 +5,6 @@
 # PHP
 /composer.phar
 /vendor
+
+# logs
+*.log
