@@ -10,5 +10,5 @@ extdiff =
 strip   =
 churn   =
 
-[extdiff]
-cmd.diff = meld
+#[extdiff]
+#cmd.diff = meld
