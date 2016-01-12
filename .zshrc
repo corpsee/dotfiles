@@ -6,4 +6,4 @@ plugins=(git)
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-source $ZSH/oh-my-zsh.sh
+source "$ZSH/oh-my-zsh.sh"
