@@ -6,40 +6,50 @@ My dotfiles
 Repositories
 ------------
 
-* Ansible  
+* Ansible
 ppa:ansible/ansible
 
-* Fish shell  
+* Vagrant
+sudo bash -c 'echo deb http://vagrant-deb.linestarve.com/ any main > /etc/apt/sources.list.d/wolfgang42-vagrant.list'
+sudo apt-key adv --keyserver pgp.mit.edu --recv-key AD319E0F7CFFA38B4D9F6E55CE3F3DE92099F7A4
+
+* Fish shell
 ppa:fish-shell/release-2
 
-* Git  
+* Git
 ppa:git-core/ppa
 
-* Apache2  
+* Apache2
 ppa:ondrej/apache2
 
-* PHP  
-ppa:ondrej/php5-oldstable  
-ppa:ondrej/php5  
-ppa:ondrej/php5-5.6
+* Nginx
+ppa:nginx/stable
+ppa:nginx/development
 
-* Guake  
+* PHP
+ppa:ondrej/php (5.5, 5.6, 7.0)
+
+ppa:ondrej/php5-oldstable (deprecated)
+ppa:ondrej/php5 (deprecated)
+ppa:ondrej/php5-5.6 (deprecated)
+
+* Guake
 ppa:webupd8team/unstable
 
-* PostgreSQL  
-wget https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -  
-deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main
+* PostgreSQL
+sudo wget https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg|xenial-pgdg main
 
-* Midnight Commander  
-apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 76FB442E  
-deb http://www.tataranovich.com/debian trusty main
+* Midnight Commander
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 76FB442E  
+deb http://www.tataranovich.com/debian trusty|xenial main
 
-* Yandex Disk  
-wget http://repo.yandex.ru/yandex-disk/YANDEX-DISK-KEY.GPG -O- | apt-key add -  
+* Yandex Disk
+sudo wget http://repo.yandex.ru/yandex-disk/YANDEX-DISK-KEY.GPG -O- | sudo apt-key add -
 deb http://repo.yandex.ru/yandex-disk/deb/ stable main
 
-* MariaDB  
-apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db  
-deb http://mirror.timeweb.ru/mariadb/repo/5.5/ubuntu trusty main  
-deb http://mirror.timeweb.ru/mariadb/repo/10.0/ubuntu trusty main  
-deb http://mirror.timeweb.ru/mariadb/repo/10.1/ubuntu trusty main
+* MariaDB
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db|0xF1656F24C74CD1D8 (trusty|xenial)
+deb http://mirror.timeweb.ru/mariadb/repo/5.5/ubuntu trusty|xenial main
+deb http://mirror.timeweb.ru/mariadb/repo/10.0/ubuntu trusty|xenial main
+deb http://mirror.timeweb.ru/mariadb/repo/10.1/ubuntu trusty|xenial main
