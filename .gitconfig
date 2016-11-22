@@ -31,12 +31,13 @@
     ll = log ORIG_HEAD.. --stat --no-merges
 
 [core]
-    autocrlf   = input
-    safecrlf   = false
-    eof        = lf
-    whitespace = trailing-space,space-before-tab
-    editor     = mcedit
-    trustctime = false
+    autocrlf     = input
+    safecrlf     = false
+    eof          = lf
+    whitespace   = trailing-space,space-before-tab
+    editor       = mcedit
+    trustctime   = false
+    excludesfile = ~/.gitignore
 
 [help]
     autocorrect = false
