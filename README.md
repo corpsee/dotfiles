@@ -7,48 +7,51 @@ Repositories
 ------------
 
 * **Ansible**  
-ppa:ansible/ansible
-
-* **Vagrant**  
-sudo bash -c 'echo deb http://vagrant-deb.linestarve.com/ any main > /etc/apt/sources.list.d/wolfgang42-vagrant.list'  
-sudo apt-key adv --keyserver pgp.mit.edu --recv-key AD319E0F7CFFA38B4D9F6E55CE3F3DE92099F7A4
-
-* **Fish shell**  
-ppa:fish-shell/release-2
+```bash
+sudo add-apt-repository ppa:ansible/ansible
+```
 
 * **Git**  
-ppa:git-core/ppa
-
-* **Apache2**  
-ppa:ondrej/apache2
+```bash
+sudo add-apt-repository ppa:git-core/ppa
+```
 
 * **Nginx**  
-ppa:nginx/stable  
-ppa:nginx/development
+```bash
+sudo add-apt-repository ppa:nginx/stable
+```
 
 * **PHP**  
-ppa:ondrej/php (5.5, 5.6, 7.0)  
-ppa:ondrej/php5-oldstable (deprecated)  
-ppa:ondrej/php5 (deprecated)  
-ppa:ondrej/php5-5.6 (deprecated)
+```bash
+sudo add-apt-repository ppa:ondrej/php
+```
 
-* **Guake**  
-ppa:webupd8team/unstable
+* **Docker**  
+```bash
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0EBFCD88
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
+```
+
+* **Vagrant**  
+```bash
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com AD319E0F7CFFA38B4D9F6E55CE3F3DE92099F7A4
+sudo add-apt-repository "deb http://vagrant-deb.linestarve.com/ any main"
+```
 
 * **PostgreSQL**  
-sudo wget https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -  
-deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg|xenial-pgdg main
+```bash
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com ACCC4CF8
+sudo add-apt-repository "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main"
+```
 
-* **Midnight Commander**  
-sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 76FB442E   
-deb http://www.tataranovich.com/debian trusty|xenial main
-
-* **Yandex Disk**  
-sudo wget http://repo.yandex.ru/yandex-disk/YANDEX-DISK-KEY.GPG -O- | sudo apt-key add -  
-deb http://repo.yandex.ru/yandex-disk/deb/ stable main
+* **YandexDisk**  
+```bash
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com EFC4571D7C90E5AF
+sudo add-apt-repository "deb http://repo.yandex.ru/yandex-disk/deb/ stable main"
+```
 
 * **MariaDB**  
-sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xcbcb082a1bb943db|0xF1656F24C74CD1D8 (trusty|xenial)  
-deb http://mirror.timeweb.ru/mariadb/repo/5.5/ubuntu trusty|xenial main  
-deb http://mirror.timeweb.ru/mariadb/repo/10.0/ubuntu trusty|xenial main  
-deb http://mirror.timeweb.ru/mariadb/repo/10.1/ubuntu trusty|xenial main
+```bash
+sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xF1656F24C74CD1D8
+sudo add-apt-repository "deb http://mirror.timeweb.ru/mariadb/repo/10.1/ubuntu xenial main"
+```
