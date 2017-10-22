@@ -27,6 +27,9 @@ sudo add-apt-repository ppa:ondrej/php
 ```
 
 * **Docker**  
+
+docker-ce
+
 ```bash
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0EBFCD88
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
