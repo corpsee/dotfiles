@@ -1,0 +1,106 @@
+alignment top_right
+background yes
+border_width 1
+cpu_avg_samples 2
+default_color FFFFFF
+color0 FFFFFF
+default_outline_color FFFFFF
+default_shade_color FFFFFF
+double_buffer yes
+draw_borders no
+draw_graph_borders no
+draw_outline no
+draw_shades no
+gap_x 40
+gap_y 40 
+maximum_width 400
+max_port_monitor_connections 64
+max_specials 512
+max_user_text 16384
+minimum_size 300 10
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+wm_class_name Conky
+own_window_colour black
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_transparent yes
+own_window_type normal
+own_window yes
+stippled_borders 2
+update_interval 2
+uppercase no
+use_spacer yes
+use_xft yes
+xftalpha 0.8
+xftfont Droid Sans:size=9
+
+TEXT
+${color0}$sysname $kernel ${alignr}$color${time %k:%M:%S}
+${machine} @ $freq(MHz)
+
+
+${color0}CPU Core 1:$color ${cpu cpu1}%$alignr${exec sensors | grep 'Core 0' | cut -c16-22 | sed '/^$/d'}
+${color0}${cpugraph cpu1 32,400 FFFFFF FFFFFF}
+
+${color0}CPU Core 2:$color ${cpu cpu2}%$alignr${exec sensors | grep 'Core 1' | cut -c16-22 | sed '/^$/d'}
+${color0}${cpugraph cpu2 32,400 FFFFFF FFFFFF}
+
+${color0}CPU Core 3:$color ${cpu cpu3}%$alignr${exec sensors | grep 'Core 2' | cut -c16-22 | sed '/^$/d'}
+${color0}${cpugraph cpu3 32,400 FFFFFF FFFFFF}
+
+${color0}CPU Core 4:$color ${cpu cpu4}%$alignr${exec sensors | grep 'Core 3' | cut -c16-22 | sed '/^$/d'}
+${color0}${cpugraph cpu4 32,400 FFFFFF FFFFFF}
+
+${color0}CPU Core 5:$color ${cpu cpu5}%$alignr${exec sensors | grep 'Core 4' | cut -c16-22 | sed '/^$/d'}
+${color0}${cpugraph cpu5 32,400 FFFFFF FFFFFF}
+
+${color0}CPU Core 6:$color ${cpu cpu6}%$alignr${exec sensors | grep 'Core 5' | cut -c16-22 | sed '/^$/d'}
+${color0}${cpugraph cpu6 32,400 FFFFFF FFFFFF}
+
+${color0}CPU Core 7:$color ${cpu cpu7}%$alignr${exec sensors | grep 'Core 6' | cut -c16-22 | sed '/^$/d'}
+${color0}${cpugraph cpu7 32,400 FFFFFF FFFFFF}
+
+${color0}CPU Core 8:$color ${cpu cpu8}%$alignr${exec sensors | grep 'Core 7' | cut -c16-22 | sed '/^$/d'}
+${color0}${cpugraph cpu8 32,400 FFFFFF FFFFFF}
+
+${color0}RAM: $color$memperc%$alignr$mem${color0} / ${color}$memmax
+${color0}${membar 5,400}
+
+${color0}Down: $color${downspeed enp2s0}$alignr${totaldown enp2s0}
+${color0}${downspeedgraph enp2s0 32,400 FFFFFF FFFFFF}
+
+${color0}Up:   $color${upspeed enp2s0}$alignr${totalup enp2s0}
+${color0}${upspeedgraph enp2s0 32,400 FFFFFF FFFFFF}
+
+${color0}/$alignr$color${fs_used /}${color0} / $color${fs_size /}
+${color0}${fs_bar 5,400 /}
+
+${color0}/data7$alignr$color${fs_used /data7}${color0} / $color${fs_size /data7}
+${color0}${fs_bar 5,400 /data7}
+
+${color0}/system7$alignr$color${fs_used /system7}${color0} / $color${fs_size /system7}
+${color0}${fs_bar 5,400 /system7}
+
+${color0}Read: $color${diskio_read}$alignr${color0}Write: $color${diskio_write}
+${color0}${diskiograph 32,400 FFFFFF FFFFFF}
+
+${color0}Top:${alignr}CPU%
+
+$color${top name 1}$alignr${top cpu 1}
+$color${top name 2}$alignr${top cpu 2}
+$color${top name 3}$alignr${top cpu 3}
+$color${top name 4}$alignr${top cpu 4}
+$color${top name 5}$alignr${top cpu 5}
+$color${top name 6}$alignr${top cpu 6}
+$color${top name 7}$alignr${top cpu 7}
+
+${color0}Top:${alignr}MEM
+
+$color${top_mem name 1}$alignr${top_mem mem_res 1}
+$color${top_mem name 2}$alignr${top_mem mem_res 2}
+$color${top_mem name 3}$alignr${top_mem mem_res 3}
+$color${top_mem name 4}$alignr${top_mem mem_res 4}
+$color${top_mem name 5}$alignr${top_mem mem_res 5}
+$color${top_mem name 6}$alignr${top_mem mem_res 6}
+$color${top_mem name 7}$alignr${top_mem mem_res 7}
