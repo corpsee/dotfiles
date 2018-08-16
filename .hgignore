@@ -6,8 +6,15 @@ syntax: glob
 .DS_Store
 
 # PHP
-vendor
 composer.phar
+composer
+vendor
 
-# logs
+# Logs
 *.log
+
+# Ansible
+*.retry
+
+# Vagrant
+.vagrant

@@ -1,10 +1,17 @@
-# editors
+# Editors
 /.idea
 /.DS_Store
 
 # PHP
 /composer.phar
+/composer
 /vendor
 
-# logs
+# Logs
 *.log
+
+# Ansible
+*.retry
+
+# Vagrant
+/.vagrant
