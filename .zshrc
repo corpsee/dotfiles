@@ -86,3 +86,5 @@ source $ZSH/oh-my-zsh.sh
 export TERM='xterm-256color'
 
 alias zsh-reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+alias normal_mode='chmod -R u-x,go-x,u=rwX,go=rX'
+alias personal_mode='chmod -R u-x,go-x,u=rwX,go='
