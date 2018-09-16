@@ -58,3 +58,8 @@ sudo add-apt-repository "deb http://repo.yandex.ru/yandex-disk/deb/ stable main"
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xF1656F24C74CD1D8
 sudo add-apt-repository "deb http://mirror.timeweb.ru/mariadb/repo/10.1/ubuntu xenial main"
 ```
+
+* **Notepadqq**
+```bash
+sudo add-apt-repository ppa:notepadqq-team/notepadqq
+```
