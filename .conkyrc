@@ -1,41 +1,40 @@
 conky.config = {
-	alignment = 'top_right',
-	background = true,
-	border_width = 1,
-	cpu_avg_samples = 2,
-	default_color = '#FFFFFF',
-	color0 = '#FFFFFF',
-	default_outline_color = '#FFFFFF',
-	default_shade_color = '#FFFFFF',
-	double_buffer = true,
-	draw_borders = false,
-	draw_graph_borders = false,
-	draw_outline = false,
-	draw_shades = false,
-	gap_x = 40,
-	gap_y = 20,
-	maximum_width = 400,
-	max_port_monitor_connections = 64,
-	max_specials = '512',
-	max_user_text = 16384,
-	minimum_width = 300,
-	minimum_height = 10,
-	net_avg_samples = 2,
-	no_buffers = true,
-	out_to_console = false,
-	own_window_colour = 'black',
-	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
-	own_window_transparent = true,
-	own_window_type = 'desktop',
-	own_window = true,
-	own_window_class = 'Conky',
-	stippled_borders = 2,
-	update_interval = 2,
-	uppercase = false,
-	use_spacer = 'yes',
-	use_xft = true,
-	xftalpha = 0.5,
-	font = 'Droid Sans:size=9',
+    alignment = 'top_right',
+    background = true,
+    border_width = 1,
+    cpu_avg_samples = 2,
+    default_color = '#FFFFFF',
+    color0 = '#FFFFFF',
+    default_outline_color = '#FFFFFF',
+    default_shade_color = '#FFFFFF',
+    double_buffer = true,
+    draw_borders = false,
+    draw_graph_borders = false,
+    draw_outline = false,
+    draw_shades = false,
+    gap_x = 40,
+    gap_y = 20,
+    maximum_width = 400,
+    max_port_monitor_connections = 64,
+    max_user_text = 16384,
+    minimum_width = 300,
+    minimum_height = 10,
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    own_window_colour = 'black',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    own_window_transparent = true,
+    own_window_type = 'desktop',
+    own_window = true,
+    own_window_class = 'Conky',
+    stippled_borders = 2,
+    update_interval = 2,
+    uppercase = false,
+    use_spacer = 'right',
+    use_xft = true,
+    xftalpha = 0.5,
+    font = 'Droid Sans:size=9',
 };
 
 conky.text = [[
@@ -78,6 +77,9 @@ conky.text = [[
     ${color0}/$alignr$color${fs_used /}${color0} / $color${fs_size /}
     ${color0}${fs_bar 5,400 /}
 
+    ${color0}/data$alignr$color${fs_used /data}${color0} / $color${fs_size /data}
+    ${color0}${fs_bar 5,400 /data}
+
     ${color0}/data7$alignr$color${fs_used /data7}${color0} / $color${fs_size /data7}
     ${color0}${fs_bar 5,400 /data7}
 
@@ -95,7 +97,6 @@ conky.text = [[
     $color${top name 4}$alignr${top cpu 4}
     $color${top name 5}$alignr${top cpu 5}
     $color${top name 6}$alignr${top cpu 6}
-    $color${top name 7}$alignr${top cpu 7}
 
     ${color0}Top:${alignr}MEM
 
@@ -105,5 +106,4 @@ conky.text = [[
     $color${top_mem name 4}$alignr${top_mem mem_res 4}
     $color${top_mem name 5}$alignr${top_mem mem_res 5}
     $color${top_mem name 6}$alignr${top_mem mem_res 6}
-    $color${top_mem name 7}$alignr${top_mem mem_res 7}
 ]];
