@@ -32,7 +32,14 @@ docker-ce
 
 ```bash
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0EBFCD88
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu xenial stable"
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+```
+
+docker-compose
+
+```bash
+sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-Linux-x86_64" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 ```
 
 * **Vagrant**  
@@ -44,7 +51,7 @@ sudo add-apt-repository "deb http://vagrant-deb.linestarve.com/ any main"
 * **PostgreSQL**  
 ```bash
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com ACCC4CF8
-sudo add-apt-repository "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main"
+sudo add-apt-repository "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main"
 ```
 
 * **YandexDisk**  
@@ -56,7 +63,7 @@ sudo add-apt-repository "deb http://repo.yandex.ru/yandex-disk/deb/ stable main"
 * **MariaDB**  
 ```bash
 sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 0xF1656F24C74CD1D8
-sudo add-apt-repository "deb http://mirror.timeweb.ru/mariadb/repo/10.1/ubuntu xenial main"
+sudo add-apt-repository "deb http://mirror.timeweb.ru/mariadb/repo/10.1/ubuntu bionic main"
 ```
 
 * **Notepadqq**
