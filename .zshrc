@@ -85,6 +85,17 @@ source $ZSH/oh-my-zsh.sh
 
 export TERM='xterm-256color'
 
-alias zsh-reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
-alias normal_mode='chmod -R u-x,go-x,u=rwX,go=rX'
-alias personal_mode='chmod -R u-x,go-x,u=rwX,go='
+alias zsh_reload=". ~/.zshrc && echo 'ZSH config reloaded from ~/.zshrc'"
+
+alias normal_mode='chmod -R u-x,go-x-w,u=rwX,go=rX'
+alias personal_mode='chmod -R u-x,go-r-w-x,u=rwX,go='
+alias clean_system='sudo aptitude autoclean && sudo aptitude clean && sudo apt-get autoremove'
+alias add_ppa='sudo add-apt-repository'
+
+function generate_ssh() {
+    if [ $# -eq 0 ]; then
+        ssh-keygen -o -t rsa -b 4096 -C "poisoncorpsee@gmail.com" -P "";
+    else
+        ssh-keygen -o -t rsa -b 4096 -C "poisoncorpsee@gmail.com" -P "" -f "$1";
+    fi;
+}

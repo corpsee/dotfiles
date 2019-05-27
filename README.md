@@ -6,6 +6,16 @@ My dotfiles
 Repositories
 ------------
 
+* **Nvidia**
+```bash
+sudo add-apt-repository ppa:graphics-drivers/ppa
+```
+
+* **Ulauncher**
+```bash
+sudo add-apt-repository ppa:agornostal/ulauncher
+```
+
 * **Ansible**  
 ```bash
 sudo add-apt-repository ppa:ansible/ansible
