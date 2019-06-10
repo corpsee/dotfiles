@@ -1,7 +1,7 @@
-[user]
-    name       = Dmitry Khomutov
-    email      = poisoncorpsee@gmail.com
-    signingKey = poisoncorpsee@gmail.com
+[includeIf "gitdir:~/projects/personal/"]
+    path = .gitconfig.personal
+[includeIf "gitdir:~/projects/work/"]
+    path = .gitconfig.work
 
 [credential]
     helper = cache --timeout=3600
@@ -60,9 +60,3 @@
     reflogexpire            = 135
     reflogexpireunreachable = 45
     pruneExpire             = 4.weeks.ago
-
-[commit]
-    gpgsign = true
-
-[gpg]
-    program = gpg2

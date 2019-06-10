@@ -1,0 +1,8 @@
+[user]
+    name       = Dmitry Khomutov
+    email      = poisoncorpsee@gmail.com
+    signingKey = poisoncorpsee@gmail.com
+[commit]
+    gpgsign = true
+[gpg]
+    program = gpg2
