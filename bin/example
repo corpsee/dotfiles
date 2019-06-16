@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# Abort on nonzero exit status. Workaround:
+# `command || true` or
+# `set +e; command; set -e`.
+set -o errexit
+
+# Abort on undefined variable. Workaround for params:
+# `param1=${1:-"default"}` or `param1=${1:-}` for empty param1
+set -o nounset
+
+# Don't hide errors within pipes
+set -o pipefail
+
+# For debug
+#set -o xtrace
+
+IFS=$'\n\t'
+
+readonly script_name=$(basename "${0}")
+readonly script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)

@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+echo "DOCKER-COMPOSE INSTALLER";
+echo "************************";
+echo "";
+
+DESTINATION="/usr/local/bin/docker-compose";
+INSTALLED_VERSION="$(${DESTINATION} version 2> /dev/null | grep -o -m 1 -P 'docker-compose version .*?,' | sed -n -r 's/docker-compose version (.*?),/\1/p')";
+if [[ "$INSTALLED_VERSION" == "" ]]; then
+    INSTALLED_VERSION="0.0.0 (not installed)";
+fi;
+
+echo "Installed version: $INSTALLED_VERSION";
+
+VERSION="$(curl --silent https://api.github.com/repos/docker/compose/releases/latest | jq .name -r)";
+
+echo "Latest version: $VERSION";
+echo "";
+
+if [[ "$VERSION" == "$INSTALLED_VERSION" ]]; then
+    echo "Latest version ($VERSION) already installed.";
+    exit 0;
+fi;
+
+echo "Downloading latest version ($VERSION)...";
+echo "";
+
+sudo curl -L "https://github.com/docker/compose/releases/download/$VERSION/docker-compose-Linux-x86_64" -o "$DESTINATION";
+sudo chmod +x "$DESTINATION";
+
+echo "";
+echo "Latest version ($VERSION) has been  installed."
+
+exit 1;
