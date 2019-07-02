@@ -80,3 +80,9 @@ sudo add-apt-repository "deb http://mirror.timeweb.ru/mariadb/repo/10.1/ubuntu b
 ```bash
 sudo add-apt-repository ppa:notepadqq-team/notepadqq
 ```
+
+* **Node.js**  
+```bash
+curl -sSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | sudo apt-key add -
+sudo add-apt-repository "deb https://deb.nodesource.com/node_10.x bionic main"
+```
