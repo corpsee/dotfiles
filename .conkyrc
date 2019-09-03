@@ -40,7 +40,7 @@ conky.config = {
 conky.text = [[
     ${color0}$sysname $kernel ${alignr}$color${time %k:%M:%S}
 
-    CPU Temperature: ${exec sensors | grep "temp1:.*low" | cut -c 16-17} / ${exec sensors | grep "temp1:.*low" | cut -c 34-36} °C
+    CPU Temperature: ${exec sensors -u | grep "temp1_input:" | cut -c 15-17} / ${exec sensors -u | grep "temp1_max" | cut -c 13-15} °C
     GPU Temperature: ${exec nvidia-smi -q -d TEMPERATURE | grep "GPU Current Temp" | cut -c39-40} / ${exec nvidia-smi -q -d TEMPERATURE | grep "GPU Max Operating Temp" | cut -c39-40} °C
 
     ${color0}CPU Core 1:$color ${cpu cpu1}%$alignr${exec sensors | grep 'Core 0' | cut -c16-22 | sed '/^$/d'}
