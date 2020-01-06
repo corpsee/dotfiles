@@ -16,6 +16,11 @@ sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo add-apt-repository ppa:agornostal/ulauncher
 ```
 
+* **Löve**
+```bash
+sudo add-apt-repository ppa:bartbes/love-stable
+```
+
 * **Ansible**  
 ```bash
 sudo add-apt-repository ppa:ansible/ansible
