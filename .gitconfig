@@ -52,6 +52,9 @@
 [push]
     default = current
 
+[rebase]
+    backend = apply
+
 [receive]
     fsckObjects = true
 
