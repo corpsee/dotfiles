@@ -41,7 +41,7 @@ conky.text = [[
     ${color0}$sysname $kernel ${alignr}$color${time %k:%M:%S}
 
     CPU Temperature: ${exec sensors -u zenpower-pci-00c3 | grep -m 1 "temp1_input:" | cut -c 16-17} / ${exec sensors -u zenpower-pci-00c3 | grep "temp1_max" | cut -c 14-15} °C
-    GPU Temperature: ${exec nvidia-smi -q -d TEMPERATURE | grep "GPU Current Temp" | cut -c39-40} / ${exec nvidia-smi -q -d TEMPERATURE | grep "GPU Max Operating Temp" | cut -c39-40} °C
+    GPU Temperature: ${exec nvidia-smi -q -d TEMPERATURE | grep "GPU Current Temp" | cut -c45-46} / ${exec nvidia-smi -q -d TEMPERATURE | grep "GPU Max Operating Temp" | cut -c45-46} °C
 
     ${color0}CPU Core 1:$color ${cpu cpu1}%$alignr${exec sensors | grep 'Core 0' | cut -c16-22 | sed '/^$/d'}
     ${color0}${cpugraph cpu1 15,400 FFFFFF FFFFFF}
