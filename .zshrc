@@ -113,6 +113,9 @@ alias composer_7.1="php7.1 /usr/local/bin/composer"
 alias composer_7.2="php7.2 /usr/local/bin/composer"
 alias composer_7.3="php7.3 /usr/local/bin/composer"
 alias composer_7.4="php7.4 /usr/local/bin/composer"
+alias composer_8.0="php8.0 /usr/local/bin/composer"
+
+alias show_listen="sudo netstat -tulpan | grep LISTEN"
 
 function generate_ssh() {
     if [[ $# -eq 0 ]]; then
