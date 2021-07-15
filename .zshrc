@@ -117,6 +117,8 @@ alias composer_8.0="php8.0 /usr/local/bin/composer"
 
 alias show_listen="sudo netstat -tulpan | grep LISTEN"
 
+alias restart_pulseaudio="killall -9 pulseaudio"
+
 function generate_ssh() {
     if [[ $# -eq 0 ]]; then
         ssh-keygen -o -t rsa -b 4096 -C "poisoncorpsee@gmail.com" -P "";
