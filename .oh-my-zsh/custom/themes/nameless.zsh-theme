@@ -1,6 +1,6 @@
 local base_color="%{$FG[046]%}";
 
-function git_prompt_corpsee() {
+function git_prompt_nameless() {
   $(git rev-parse --is-inside-work-tree > /dev/null 2>&1) || return
 
   local ref
@@ -31,7 +31,7 @@ else
     local php_version_formated="{php v${php_version}}";
 fi;
 
-PROMPT='${user_host} ${place} $(git_prompt_corpsee)
+PROMPT='${user_host} ${place} $(git_prompt_nameless)
 ${cursor} ';
 RPROMPT='${return_code} ${php_version_formated} ${time}';
 
