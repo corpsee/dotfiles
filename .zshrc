@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/corpsee/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -107,6 +107,8 @@ alias dir_size_all="du --human-readable --max-depth=1 --all --time --total"
 
 alias generate_password="openssl rand --base64"
 
+alias show_listen="sudo netstat -tulpan | grep LISTEN"
+
 alias composer_5.6="php5.6 /usr/local/bin/composer"
 alias composer_7.0="php7.0 /usr/local/bin/composer"
 alias composer_7.1="php7.1 /usr/local/bin/composer"
@@ -114,8 +116,6 @@ alias composer_7.2="php7.2 /usr/local/bin/composer"
 alias composer_7.3="php7.3 /usr/local/bin/composer"
 alias composer_7.4="php7.4 /usr/local/bin/composer"
 alias composer_8.0="php8.0 /usr/local/bin/composer"
-
-alias show_listen="sudo netstat -tulpan | grep LISTEN"
 
 alias restart_pulseaudio="killall -9 pulseaudio"
 
