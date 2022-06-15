@@ -14,10 +14,10 @@ conky.config = {
     draw_shades = false,
     gap_x = 40,
     gap_y = 20,
-    maximum_width = 400,
+    maximum_width = 500,
     max_port_monitor_connections = 64,
     max_user_text = 16384,
-    minimum_width = 300,
+    minimum_width = 500,
     minimum_height = 10,
     net_avg_samples = 2,
     no_buffers = true,
@@ -44,67 +44,67 @@ conky.text = [[
     GPU Temperature: ${exec nvidia-smi -q -d TEMPERATURE | grep "GPU Current Temp" | cut -c45-46} / 90 °C
 
     ${color0}CPU Core 1:$color ${cpu cpu1}%$alignr${exec sensors | grep 'Core 0' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu1 14,400 FFFFFF FFFFFF}
+    ${color0}${cpugraph cpu1 14,480 FFFFFF FFFFFF}
 
     ${color0}CPU Core 2:$color ${cpu cpu2}%$alignr${exec sensors | grep 'Core 1' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu2 14,400 FFFFFF FFFFFF}
+    ${color0}${cpugraph cpu2 14,480 FFFFFF FFFFFF}
 
     ${color0}CPU Core 3:$color ${cpu cpu3}%$alignr${exec sensors | grep 'Core 2' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu3 14,400 FFFFFF FFFFFF}
+    ${color0}${cpugraph cpu3 14,480 FFFFFF FFFFFF}
 
     ${color0}CPU Core 4:$color ${cpu cpu4}%$alignr${exec sensors | grep 'Core 3' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu4 14,400 FFFFFF FFFFFF}
+    ${color0}${cpugraph cpu4 14,480 FFFFFF FFFFFF}
 
     ${color0}CPU Core 5:$color ${cpu cpu5}%$alignr${exec sensors | grep 'Core 4' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu5 14,400 FFFFFF FFFFFF}
+    ${color0}${cpugraph cpu5 14,480 FFFFFF FFFFFF}
 
     ${color0}CPU Core 6:$color ${cpu cpu6}%$alignr${exec sensors | grep 'Core 5' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu6 14,400 FFFFFF FFFFFF}
+    ${color0}${cpugraph cpu6 14,480 FFFFFF FFFFFF}
 
     ${color0}CPU Core 7:$color ${cpu cpu7}%$alignr${exec sensors | grep 'Core 6' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu7 14,400 FFFFFF FFFFFF}
+    ${color0}${cpugraph cpu7 14,480 FFFFFF FFFFFF}
 
     ${color0}CPU Core 8:$color ${cpu cpu8}%$alignr${exec sensors | grep 'Core 7' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu8 14,400 FFFFFF FFFFFF}
+    ${color0}${cpugraph cpu8 14,480 FFFFFF FFFFFF}
 
     ${color0}CPU Core 9:$color ${cpu cpu9}%$alignr${exec sensors | grep 'Core 8' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu9 14,400 FFFFFF FFFFFF}
+    ${color0}${cpugraph cpu9 14,480 FFFFFF FFFFFF}
 
     ${color0}CPU Core 10:$color ${cpu cpu10}%$alignr${exec sensors | grep 'Core 9' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu10 14,400 FFFFFF FFFFFF}
+    ${color0}${cpugraph cpu10 14,480 FFFFFF FFFFFF}
 
     ${color0}CPU Core 11:$color ${cpu cpu11}%$alignr${exec sensors | grep 'Core 10' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu11 14,400 FFFFFF FFFFFF}
+    ${color0}${cpugraph cpu11 14,480 FFFFFF FFFFFF}
 
     ${color0}CPU Core 12:$color ${cpu cpu12}%$alignr${exec sensors | grep 'Core 11' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu12 14,400 FFFFFF FFFFFF}
+    ${color0}${cpugraph cpu12 14,480 FFFFFF FFFFFF}
 
     ${color0}RAM: $color$memperc%$alignr$mem${color0} / ${color}$memmax
-    ${color0}${membar 4,400}
+    ${color0}${membar 4,480}
 
     ${color0}Down: $color${downspeed enp5s0}$alignr${totaldown enp5s0}
-    ${color0}${downspeedgraph enp5s0 14,400 FFFFFF FFFFFF}
+    ${color0}${downspeedgraph enp5s0 14,480 FFFFFF FFFFFF}
 
     ${color0}Up:   $color${upspeed enp5s0}$alignr${totalup enp5s0}
-    ${color0}${upspeedgraph enp5s0 14,400 FFFFFF FFFFFF}
+    ${color0}${upspeedgraph enp5s0 14,480 FFFFFF FFFFFF}
 
     ${color0}/$alignr$color${fs_used /}${color0} / $color${fs_size /}
-    ${color0}${fs_bar 4,400 /}
+    ${color0}${fs_bar 4,480 /}
 
     ${color0}/home$alignr$color${fs_used /home}${color0} / $color${fs_size /home}
-    ${color0}${fs_bar 4,400 /home}
+    ${color0}${fs_bar 4,480 /home}
 
     ${color0}/mnt/data20$alignr$color${fs_used /mnt/data20}${color0} / $color${fs_size /mnt/data20}
-    ${color0}${fs_bar 4,400 /mnt/data20}
+    ${color0}${fs_bar 4,480 /mnt/data20}
 
     ${color0}/mnt/data10$alignr$color${fs_used /mnt/data10}${color0} / $color${fs_size /mnt/data10}
-    ${color0}${fs_bar 4,400 /mnt/data10}
+    ${color0}${fs_bar 4,480 /mnt/data10}
 
     ${color0}/mnt/system10$alignr$color${fs_used /mnt/system10}${color0} / $color${fs_size /mnt/system10}
-    ${color0}${fs_bar 4,400 /mnt/system10}
+    ${color0}${fs_bar 4,480 /mnt/system10}
 
     ${color0}Read: $color${diskio_read}$alignr${color0}Write: $color${diskio_write}
-    ${color0}${diskiograph 14,400 FFFFFF FFFFFF}
+    ${color0}${diskiograph 14,480 FFFFFF FFFFFF}
 
     ${color0}Top:${alignr}CPU%
 
