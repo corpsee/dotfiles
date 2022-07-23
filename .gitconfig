@@ -43,9 +43,6 @@
 [help]
     autocorrect = false
 
-[fetch]
-    fsckObjects = true
-
 [pull]
     ff = true
 
