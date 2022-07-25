@@ -12,7 +12,7 @@ conky.config = {
     draw_graph_borders = false,
     draw_outline = false,
     draw_shades = false,
-    gap_x = 15,
+    gap_x = 10,
     gap_y = 10,
     maximum_width = 400,
     max_port_monitor_connections = 64,
@@ -91,7 +91,7 @@ conky.text = [[
     ${color0}Read: $color${diskio_read}$alignr${color0}Write: $color${diskio_write}
     ${color0}${diskiograph 12,385 FFFFFF FFFFFF}
 
-    ${color0}Top:${alignr}CPU%
+    ${color0}CPU top:${alignr}%
 
     $color${top name 1}$alignr${top cpu 1}
     $color${top name 2}$alignr${top cpu 2}
@@ -99,7 +99,7 @@ conky.text = [[
     $color${top name 4}$alignr${top cpu 4}
     $color${top name 5}$alignr${top cpu 5}
 
-    ${color0}Top:${alignr}MEM
+    ${color0}Memory top:${alignr}
 
     $color${top_mem name 1}$alignr${top_mem mem_res 1}
     $color${top_mem name 2}$alignr${top_mem mem_res 2}
