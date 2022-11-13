@@ -45,8 +45,8 @@ conky.text = [[
     GPU Temperature: ${exec nvidia-smi -q -d TEMPERATURE | grep "GPU Current Temp" | cut -c45-46} / 90 °C
 
 
-    ${color0}CPU Total:  $color ${cpu cpu0}%$alignr${exec sensors | grep 'Core 0' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu0 40,482 FFFFFF FFFFFF -l -t}
+    ${color0}CPU Total:  $color ${cpu cpu0}%
+    ${color0}${cpugraph cpu0 40,482 FFFFFF FFFFFF -l}
 
     ${color0}CPU Core 1:${color} ${cpu cpu1}%${alignr}${color0}CPU Core 7:  ${color} ${cpu cpu7}%
     ${color0}${cpugraph cpu1 20,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu7 20,233 FFFFFF FFFFFF -l}

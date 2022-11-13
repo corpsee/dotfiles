@@ -28,6 +28,7 @@ conky.config = {
     own_window_type = 'desktop',
     own_window = true,
     own_window_class = 'Conky',
+    own_window_argb_visual = true,
     stippled_borders = 2,
     update_interval = 2,
     uppercase = false,
@@ -40,56 +41,42 @@ conky.config = {
 conky.text = [[
     ${color0}$sysname $kernel ${alignr}$color${time %k:%M:%S}
 
-    ${color0}CPU Core 1:$color ${cpu cpu1}%$alignr${exec sensors | grep 'Core 0' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu1 12,385 FFFFFF FFFFFF}
 
-    ${color0}CPU Core 2:$color ${cpu cpu2}%$alignr${exec sensors | grep 'Core 1' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu2 12,385 FFFFFF FFFFFF}
+    ${color0}CPU Total:  $color ${cpu cpu0}%
+    ${color0}${cpugraph cpu0 36,385 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 3:$color ${cpu cpu3}%$alignr${exec sensors | grep 'Core 2' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu3 12,385 FFFFFF FFFFFF}
+    ${color0}CPU Core 1:${color} ${cpu cpu1}%${alignr}${color0}CPU Core 7:  ${color} ${cpu cpu7}%
+    ${color0}${cpugraph cpu1 18,189 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu7 18,189 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 4:$color ${cpu cpu4}%$alignr${exec sensors | grep 'Core 3' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu4 12,385 FFFFFF FFFFFF}
+    ${color0}CPU Core 2:${color} ${cpu cpu2}%${alignr}${color0}CPU Core 8:  ${color} ${cpu cpu8}%
+    ${color0}${cpugraph cpu2 18,189 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu8 18,189 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 5:$color ${cpu cpu5}%$alignr${exec sensors | grep 'Core 4' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu5 12,385 FFFFFF FFFFFF}
+    ${color0}CPU Core 3:${color} ${cpu cpu3}%${alignr}${color0}CPU Core 9:  ${color} ${cpu cpu9}%
+    ${color0}${cpugraph cpu3 18,189 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu9 18,189 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 6:$color ${cpu cpu6}%$alignr${exec sensors | grep 'Core 5' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu6 12,385 FFFFFF FFFFFF}
+    ${color0}CPU Core 4:${color} ${cpu cpu4}%${alignr}${color0}CPU Core 10:  ${color} ${cpu cpu10}%
+    ${color0}${cpugraph cpu4 18,189 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu10 18,189 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 7:$color ${cpu cpu7}%$alignr${exec sensors | grep 'Core 6' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu7 12,385 FFFFFF FFFFFF}
+    ${color0}CPU Core 5:${color} ${cpu cpu5}%${alignr}${color0}CPU Core 11:${color} ${cpu cpu11}%
+    ${color0}${cpugraph cpu5 18,189 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu11 18,189 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 8:$color ${cpu cpu8}%$alignr${exec sensors | grep 'Core 7' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu8 12,385 FFFFFF FFFFFF}
-
-    ${color0}CPU Core 9:$color ${cpu cpu9}%$alignr${exec sensors | grep 'Core 8' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu9 12,385 FFFFFF FFFFFF}
-
-    ${color0}CPU Core 10:$color ${cpu cpu10}%$alignr${exec sensors | grep 'Core 9' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu10 12,385 FFFFFF FFFFFF}
-
-    ${color0}CPU Core 11:$color ${cpu cpu11}%$alignr${exec sensors | grep 'Core 10' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu11 12,385 FFFFFF FFFFFF}
-
-    ${color0}CPU Core 12:$color ${cpu cpu12}%$alignr${exec sensors | grep 'Core 11' | cut -c16-22 | sed '/^$/d'}
-    ${color0}${cpugraph cpu12 12,385 FFFFFF FFFFFF}
+    ${color0}CPU Core 6:${color} ${cpu cpu6}%${alignr}${color0}CPU Core 12:${color} ${cpu cpu12}%
+    ${color0}${cpugraph cpu6 18,189 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu12 18,189 FFFFFF FFFFFF -l}
 
     ${color0}RAM: $color$memperc%$alignr$mem${color0} / ${color}$memmax
-    ${color0}${membar 4,385}
+    ${color0}${membar 6,385}
 
     ${color0}Down: $color${downspeed wlp1s0}$alignr${totaldown enp5s0}
-    ${color0}${downspeedgraph wlp1s0 12,385 FFFFFF FFFFFF}
+    ${color0}${downspeedgraph wlp1s0 18,385 FFFFFF FFFFFF}
 
     ${color0}Up:   $color${upspeed wlp1s0}$alignr${totalup enp5s0}
-    ${color0}${upspeedgraph wlp1s0 12,385 FFFFFF FFFFFF}
+    ${color0}${upspeedgraph wlp1s0 18,385 FFFFFF FFFFFF}
 
     ${color0}/$alignr$color${fs_used /}${color0} / $color${fs_size /}
-    ${color0}${fs_bar 4,385 /}
+    ${color0}${fs_bar 6,385 /}
 
     ${color0}Read: $color${diskio_read}$alignr${color0}Write: $color${diskio_write}
-    ${color0}${diskiograph 12,385 FFFFFF FFFFFF}
+    ${color0}${diskiograph 18,385 FFFFFF FFFFFF}
 
     ${color0}CPU top:${alignr}%
 
