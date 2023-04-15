@@ -39,32 +39,39 @@ conky.config = {
 };
 
 conky.text = [[
-    ${color0}$sysname $kernel ${alignr}$color${time %k:%M:%S}
+    ${color0}${font :BOLD:size=10}$sysname $kernel ${alignr}$color${time %k:%M:%S}${font :size=9}
 
     CPU Temperature: ${exec sensors | grep -m 1 "Tctl:" | cut -c 16-17} / 90 °C
     GPU Temperature: ${exec nvidia-smi -q -d TEMPERATURE | grep "GPU Current Temp" | cut -c45-46} / 90 °C
 
 
-    ${color0}CPU Total:  $color ${cpu cpu0}%
-    ${color0}${cpugraph cpu0 40,482 FFFFFF FFFFFF -l}
+    ${color0}${font :BOLD:size=10}CPU Total:${font :size=9}  $color ${cpu cpu0}%
+    ${color0}${cpugraph cpu0 35,482 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 1:${color} ${cpu cpu1}%${alignr}${color0}CPU Core 7:  ${color} ${cpu cpu7}%
-    ${color0}${cpugraph cpu1 20,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu7 20,233 FFFFFF FFFFFF -l}
+    ${color0}CPU Core 1:${color} ${cpu cpu1}%${alignr}${color0}CPU Core 9:  ${color} ${cpu cpu9}%
+    ${color0}${cpugraph cpu1 15,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu9 15,233 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 2:${color} ${cpu cpu2}%${alignr}${color0}CPU Core 8:  ${color} ${cpu cpu8}%
-    ${color0}${cpugraph cpu2 20,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu8 20,233 FFFFFF FFFFFF -l}
+    ${color0}CPU Core 2:${color} ${cpu cpu2}%${alignr}${color0}CPU Core 10: ${color} ${cpu cpu10}%
+    ${color0}${cpugraph cpu2 15,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu10 15,233 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 3:${color} ${cpu cpu3}%${alignr}${color0}CPU Core 9:  ${color} ${cpu cpu9}%
-    ${color0}${cpugraph cpu3 20,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu9 20,233 FFFFFF FFFFFF -l}
+    ${color0}CPU Core 3:${color} ${cpu cpu3}%${alignr}${color0}CPU Core 11: ${color} ${cpu cpu11}%
+    ${color0}${cpugraph cpu3 15,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu11 15,233 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 4:${color} ${cpu cpu4}%${alignr}${color0}CPU Core 10:  ${color} ${cpu cpu10}%
-    ${color0}${cpugraph cpu4 20,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu10 20,233 FFFFFF FFFFFF -l}
+    ${color0}CPU Core 4:${color} ${cpu cpu4}%${alignr}${color0}CPU Core 12: ${color} ${cpu cpu12}%
+    ${color0}${cpugraph cpu4 15,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu12 15,233 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 5:${color} ${cpu cpu5}%${alignr}${color0}CPU Core 11:${color} ${cpu cpu11}%
-    ${color0}${cpugraph cpu5 20,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu11 20,233 FFFFFF FFFFFF -l}
+    ${color0}CPU Core 5:${color} ${cpu cpu5}%${alignr}${color0}CPU Core 13: ${color} ${cpu cpu13}%
+    ${color0}${cpugraph cpu5 15,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu13 15,233 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 6:${color} ${cpu cpu6}%${alignr}${color0}CPU Core 12:${color} ${cpu cpu12}%
-    ${color0}${cpugraph cpu6 20,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu12 20,233 FFFFFF FFFFFF -l}
+    ${color0}CPU Core 6:${color} ${cpu cpu6}%${alignr}${color0}CPU Core 14: ${color} ${cpu cpu14}%
+    ${color0}${cpugraph cpu6 15,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu14 15,233 FFFFFF FFFFFF -l}
+
+    ${color0}CPU Core 7:${color} ${cpu cpu7}%${alignr}${color0}CPU Core 15: ${color} ${cpu cpu15}%
+    ${color0}${cpugraph cpu7 15,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu15 15,233 FFFFFF FFFFFF -l}
+
+    ${color0}CPU Core 8:${color} ${cpu cpu8}%${alignr}${color0}CPU Core 16: ${color} ${cpu cpu16}%
+    ${color0}${cpugraph cpu8 15,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu16 15,233 FFFFFF FFFFFF -l}
+
 
     ${color0}RAM: $color$memperc%$alignr$mem${color0} / ${color}$memmax
     ${color0}${membar 6,482}
@@ -90,7 +97,7 @@ conky.text = [[
     ${color0}Read: $color${diskio_read}$alignr${color0}Write: $color${diskio_write}
     ${color0}${diskiograph 20,482 FFFFFF FFFFFF}
 
-    ${color0}CPU top:${alignr}%
+    ${color0}${font :BOLD:size=10}CPU Top:${font :size=9}${alignr}%
 
     $color${top name 1}$alignr${top cpu 1}
     $color${top name 2}$alignr${top cpu 2}
@@ -103,7 +110,7 @@ conky.text = [[
     $color${top name 9}$alignr${top cpu 9}
     $color${top name 10}$alignr${top cpu 10}
 
-    ${color0}Memory top:${alignr}
+    ${color0}${font :BOLD:size=10}RAM Top:${font :size=9}${alignr}
 
     $color${top_mem name 1}$alignr${top_mem mem_res 1}
     $color${top_mem name 2}$alignr${top_mem mem_res 2}
