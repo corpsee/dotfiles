@@ -88,6 +88,9 @@ conky.text = [[
     ${color0}/mnt/data20$alignr$color${fs_used /mnt/data20}${color0} / $color${fs_size /mnt/data20}
     ${color0}${fs_bar 6,482 /mnt/data20}
 
+    ${color0}/mnt/data21$alignr$color${fs_used /mnt/data21}${color0} / $color${fs_size /mnt/data21}
+    ${color0}${fs_bar 6,482 /mnt/data21}
+
     ${color0}/mnt/data10$alignr$color${fs_used /mnt/data10}${color0} / $color${fs_size /mnt/data10}
     ${color0}${fs_bar 6,482 /mnt/data10}
 
@@ -108,7 +111,6 @@ conky.text = [[
     $color${top name 7}$alignr${top cpu 7}
     $color${top name 8}$alignr${top cpu 8}
     $color${top name 9}$alignr${top cpu 9}
-    $color${top name 10}$alignr${top cpu 10}
 
     ${color0}${font :BOLD:size=10}RAM Top:${font :size=9}${alignr}
 
@@ -121,5 +123,4 @@ conky.text = [[
     $color${top_mem name 7}$alignr${top_mem mem_res 7}
     $color${top_mem name 8}$alignr${top_mem mem_res 8}
     $color${top_mem name 9}$alignr${top_mem mem_res 9}
-    $color${top_mem name 10}$alignr${top_mem mem_res 10}
 ]];
