@@ -94,8 +94,8 @@ conky.text = [[
     ${color0}/mnt/data10$alignr$color${fs_used /mnt/data10}${color0} / $color${fs_size /mnt/data10}
     ${color0}${fs_bar 6,482 /mnt/data10}
 
-    ${color0}/mnt/storage$alignr$color${exec df /mnt/storage/Backup -H | awk '/192.168/{print $3}'}${color0} / $color${exec df /mnt/storage/Backup -H | awk '/192.168/{print $2}'}
-    ${color0}${fs_bar 6,482 /mnt/storage}
+    ${color0}/mnt/storage$alignr$color${exec df /mnt/storage/Backups -H | awk '/192.168/{print $3}'}${color0} / $color${exec df /mnt/storage/Backups -H | awk '/192.168/{print $2}'}
+    ${color0}${fs_bar 6,482 /mnt/storage/Backups}
 
     ${color0}Read: $color${diskio_read}$alignr${color0}Write: $color${diskio_write}
     ${color0}${diskiograph 20,482 FFFFFF FFFFFF}
