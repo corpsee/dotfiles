@@ -85,11 +85,8 @@ conky.text = [[
     ${color0}/$alignr$color${fs_used /}${color0} / $color${fs_size /}
     ${color0}${fs_bar 6,482 /}
 
-    ${color0}/mnt/data20$alignr$color${fs_used /mnt/data20}${color0} / $color${fs_size /mnt/data20}
-    ${color0}${fs_bar 6,482 /mnt/data20}
-
-    ${color0}/mnt/data21$alignr$color${fs_used /mnt/data21}${color0} / $color${fs_size /mnt/data21}
-    ${color0}${fs_bar 6,482 /mnt/data21}
+    ${color0}/mnt/data$alignr$color${fs_used /mnt/data}${color0} / $color${fs_size /mnt/data}
+    ${color0}${fs_bar 6,482 /mnt/data}
 
     ${color0}/mnt/data10$alignr$color${fs_used /mnt/data10}${color0} / $color${fs_size /mnt/data10}
     ${color0}${fs_bar 6,482 /mnt/data10}
