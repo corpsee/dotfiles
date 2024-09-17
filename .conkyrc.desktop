@@ -13,7 +13,7 @@ conky.config = {
     draw_outline = false,
     draw_shades = false,
     gap_x = 20,
-    gap_y = 20,
+    gap_y = 8,
     maximum_width = 500,
     max_port_monitor_connections = 64,
     max_user_text = 16384,
@@ -46,56 +46,56 @@ conky.text = [[
 
 
     ${color0}${font :BOLD:size=10}CPU Total:${font :size=9}  $color ${cpu cpu0}%
-    ${color0}${cpugraph cpu0 35,482 FFFFFF FFFFFF -l}
+    ${color0}${cpugraph cpu0 25,486 FFFFFF FFFFFF -l}
 
     ${color0}CPU Core 1:${color} ${cpu cpu1}%${alignr}${color0}CPU Core 9:  ${color} ${cpu cpu9}%
-    ${color0}${cpugraph cpu1 15,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu9 15,233 FFFFFF FFFFFF -l}
+    ${color0}${cpugraph cpu1 10,236 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu9 10,236 FFFFFF FFFFFF -l}
 
     ${color0}CPU Core 2:${color} ${cpu cpu2}%${alignr}${color0}CPU Core 10: ${color} ${cpu cpu10}%
-    ${color0}${cpugraph cpu2 15,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu10 15,233 FFFFFF FFFFFF -l}
+    ${color0}${cpugraph cpu2 10,236 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu10 10,236 FFFFFF FFFFFF -l}
 
     ${color0}CPU Core 3:${color} ${cpu cpu3}%${alignr}${color0}CPU Core 11: ${color} ${cpu cpu11}%
-    ${color0}${cpugraph cpu3 15,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu11 15,233 FFFFFF FFFFFF -l}
+    ${color0}${cpugraph cpu3 10,236 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu11 10,236 FFFFFF FFFFFF -l}
 
     ${color0}CPU Core 4:${color} ${cpu cpu4}%${alignr}${color0}CPU Core 12: ${color} ${cpu cpu12}%
-    ${color0}${cpugraph cpu4 15,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu12 15,233 FFFFFF FFFFFF -l}
+    ${color0}${cpugraph cpu4 10,236 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu12 10,236 FFFFFF FFFFFF -l}
 
     ${color0}CPU Core 5:${color} ${cpu cpu5}%${alignr}${color0}CPU Core 13: ${color} ${cpu cpu13}%
-    ${color0}${cpugraph cpu5 15,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu13 15,233 FFFFFF FFFFFF -l}
+    ${color0}${cpugraph cpu5 10,236 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu13 10,236 FFFFFF FFFFFF -l}
 
     ${color0}CPU Core 6:${color} ${cpu cpu6}%${alignr}${color0}CPU Core 14: ${color} ${cpu cpu14}%
-    ${color0}${cpugraph cpu6 15,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu14 15,233 FFFFFF FFFFFF -l}
+    ${color0}${cpugraph cpu6 10,236 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu14 10,236 FFFFFF FFFFFF -l}
 
     ${color0}CPU Core 7:${color} ${cpu cpu7}%${alignr}${color0}CPU Core 15: ${color} ${cpu cpu15}%
-    ${color0}${cpugraph cpu7 15,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu15 15,233 FFFFFF FFFFFF -l}
+    ${color0}${cpugraph cpu7 10,236 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu15 10,236 FFFFFF FFFFFF -l}
 
     ${color0}CPU Core 8:${color} ${cpu cpu8}%${alignr}${color0}CPU Core 16: ${color} ${cpu cpu16}%
-    ${color0}${cpugraph cpu8 15,233 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu16 15,233 FFFFFF FFFFFF -l}
+    ${color0}${cpugraph cpu8 10,236 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu16 10,236 FFFFFF FFFFFF -l}
 
 
     ${color0}RAM: $color$memperc%$alignr$mem${color0} / ${color}$memmax
-    ${color0}${membar 6,482}
+    ${color0}${membar 6,486}
 
-    ${color0}Down: $color${downspeed enp5s0}$alignr${totaldown eno1}
-    ${color0}${downspeedgraph eno1 20,482 FFFFFF FFFFFF}
+    ${color0}Downspeed: $color${downspeed enp4s0}$alignr Totaldown: ${totaldown enp4s0}
+    ${color0}${downspeedgraph enp4s0 20,486 FFFFFF FFFFFF}
 
-    ${color0}Up:   $color${upspeed enp5s0}$alignr${totalup eno1}
-    ${color0}${upspeedgraph eno1 20,482 FFFFFF FFFFFF}
+    ${color0}Upspeed:   $color${upspeed enp4s0}$alignr Totalup: ${totalup enp4s0}
+    ${color0}${upspeedgraph enp4s0 20,486 FFFFFF FFFFFF}
 
     ${color0}/$alignr$color${fs_used /}${color0} / $color${fs_size /}
-    ${color0}${fs_bar 6,482 /}
+    ${color0}${fs_bar 6,486 /}
 
     ${color0}/mnt/data$alignr$color${fs_used /mnt/data}${color0} / $color${fs_size /mnt/data}
-    ${color0}${fs_bar 6,482 /mnt/data}
+    ${color0}${fs_bar 6,486 /mnt/data}
 
     ${color0}/mnt/data10$alignr$color${fs_used /mnt/data10}${color0} / $color${fs_size /mnt/data10}
-    ${color0}${fs_bar 6,482 /mnt/data10}
+    ${color0}${fs_bar 6,486 /mnt/data10}
 
     ${color0}/mnt/storage$alignr$color${exec df /mnt/storage/Backups -H | awk '/192.168/{print $3}'}${color0} / $color${exec df /mnt/storage/Backups -H | awk '/192.168/{print $2}'}
-    ${color0}${fs_bar 6,482 /mnt/storage/Backups}
+    ${color0}${fs_bar 6,486 /mnt/storage/Backups}
 
     ${color0}Read: $color${diskio_read}$alignr${color0}Write: $color${diskio_write}
-    ${color0}${diskiograph 20,482 FFFFFF FFFFFF}
+    ${color0}${diskiograph 20,486 FFFFFF FFFFFF}
 
     ${color0}${font :BOLD:size=10}CPU Top:${font :size=9}${alignr}%
 
@@ -105,9 +105,6 @@ conky.text = [[
     $color${top name 4}$alignr${top cpu 4}
     $color${top name 5}$alignr${top cpu 5}
     $color${top name 6}$alignr${top cpu 6}
-    $color${top name 7}$alignr${top cpu 7}
-    $color${top name 8}$alignr${top cpu 8}
-    $color${top name 9}$alignr${top cpu 9}
 
     ${color0}${font :BOLD:size=10}RAM Top:${font :size=9}${alignr}
 
@@ -117,7 +114,4 @@ conky.text = [[
     $color${top_mem name 4}$alignr${top_mem mem_res 4}
     $color${top_mem name 5}$alignr${top_mem mem_res 5}
     $color${top_mem name 6}$alignr${top_mem mem_res 6}
-    $color${top_mem name 7}$alignr${top_mem mem_res 7}
-    $color${top_mem name 8}$alignr${top_mem mem_res 8}
-    $color${top_mem name 9}$alignr${top_mem mem_res 9}
 ]];
