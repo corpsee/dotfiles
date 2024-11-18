@@ -107,12 +107,12 @@ alias dir_size_all="du --human-readable --max-depth=1 --all --time --total"
 
 alias generate_password="openssl rand --base64"
 
-alias show_listen="sudo netstat -tulpan | grep LISTEN"
-
 alias composer_7.4="php7.4 /usr/local/bin/composer"
 alias composer_8.0="php8.0 /usr/local/bin/composer"
 alias composer_8.1="php8.1 /usr/local/bin/composer"
 alias composer_8.2="php8.2 /usr/local/bin/composer"
+alias composer_8.3="php8.3 /usr/local/bin/composer"
+alias composer_8.4="php8.4 /usr/local/bin/composer"
 
 alias restart_pulseaudio="killall -9 pulseaudio"
 
