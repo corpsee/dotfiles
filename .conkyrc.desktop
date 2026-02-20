@@ -12,23 +12,23 @@ conky.config = {
     draw_graph_borders = false,
     draw_outline = false,
     draw_shades = false,
-    gap_x = 20,
-    gap_y = 8,
+    gap_x = 0,
+    gap_y = 0,
     maximum_width = 500,
     max_port_monitor_connections = 64,
     max_user_text = 16384,
-    minimum_width = 500,
+    minimum_width = 520,
     minimum_height = 10,
     net_avg_samples = 2,
     no_buffers = true,
     out_to_console = false,
     own_window_colour = 'black',
     own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
-    own_window_transparent = true,
     own_window_type = 'desktop',
     own_window = true,
     own_window_class = 'conky',
     own_window_argb_visual = true,
+    own_window_argb_value = 150,
     stippled_borders = 2,
     update_interval = 2,
     uppercase = false,
@@ -36,82 +36,84 @@ conky.config = {
     use_xft = true,
     xftalpha = 0.5,
     font = 'Droid Sans:size=9',
+    border_inner_margin = 25,
 };
 
 conky.text = [[
-    ${color0}${font :BOLD:size=10}$sysname $kernel ${alignr}$color${time %k:%M:%S}${font :size=9}
 
-    CPU Temperature: ${exec sensors | grep -m 1 "Tctl:" | cut -c 16-17} / 90 °C
-    GPU Temperature: ${exec nvidia-smi -q -d TEMPERATURE | grep "GPU Current Temp" | cut -c45-46} / 90 °C
+${color0}${font :BOLD:size=10}$sysname $kernel ${alignr}${offset -25}$color${time %k:%M:%S} ${font :size=9}
 
+CPU Temperature: ${exec sensors | grep -m 1 "Tctl:" | cut -c 16-17} / 90 °C
+GPU Temperature: ${exec nvidia-smi -q -d TEMPERATURE | grep "GPU Current Temp" | cut -c45-46} / 90 °C
 
-    ${color0}${font :BOLD:size=10}CPU Total:${font :size=9}  $color ${cpu cpu0}%
-    ${color0}${cpugraph cpu0 25,486 FFFFFF FFFFFF -l}
+${color0}${font :BOLD:size=10}CPU Total:${font :size=9}  $color ${cpu cpu0}%
+${color0}${cpugraph cpu0 20,475 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 1:${color} ${cpu cpu1}%${alignr}${color0}CPU Core 9:  ${color} ${cpu cpu9}%
-    ${color0}${cpugraph cpu1 10,236 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu9 10,236 FFFFFF FFFFFF -l}
+${color0}CPU Core 1:${color} ${cpu cpu1}%${alignr}${offset -25}${color0}CPU Core 9:  ${color} ${cpu cpu9}%
+${color0}${cpugraph cpu1 10,230 FFFFFF FFFFFF -l}${alignr}${offset -25}${color0}${cpugraph cpu9 10,230 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 2:${color} ${cpu cpu2}%${alignr}${color0}CPU Core 10: ${color} ${cpu cpu10}%
-    ${color0}${cpugraph cpu2 10,236 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu10 10,236 FFFFFF FFFFFF -l}
+${color0}CPU Core 2:${color} ${cpu cpu2}%${alignr}${offset -25}${color0}CPU Core 10: ${color} ${cpu cpu10}%
+${color0}${cpugraph cpu2 10,230 FFFFFF FFFFFF -l}${alignr}${offset -25}${color0}${cpugraph cpu10 10,230 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 3:${color} ${cpu cpu3}%${alignr}${color0}CPU Core 11: ${color} ${cpu cpu11}%
-    ${color0}${cpugraph cpu3 10,236 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu11 10,236 FFFFFF FFFFFF -l}
+${color0}CPU Core 3:${color} ${cpu cpu3}%${alignr}${offset -25}${color0}CPU Core 11: ${color} ${cpu cpu11}%
+${color0}${cpugraph cpu3 10,230 FFFFFF FFFFFF -l}${alignr}${offset -25}${color0}${cpugraph cpu11 10,230 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 4:${color} ${cpu cpu4}%${alignr}${color0}CPU Core 12: ${color} ${cpu cpu12}%
-    ${color0}${cpugraph cpu4 10,236 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu12 10,236 FFFFFF FFFFFF -l}
+${color0}CPU Core 4:${color} ${cpu cpu4}%${alignr}${offset -25}${color0}CPU Core 12: ${color} ${cpu cpu12}%
+${color0}${cpugraph cpu4 10,230 FFFFFF FFFFFF -l}${alignr}${offset -25}${color0}${cpugraph cpu12 10,230 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 5:${color} ${cpu cpu5}%${alignr}${color0}CPU Core 13: ${color} ${cpu cpu13}%
-    ${color0}${cpugraph cpu5 10,236 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu13 10,236 FFFFFF FFFFFF -l}
+${color0}CPU Core 5:${color} ${cpu cpu5}%${alignr}${offset -25}${color0}CPU Core 13: ${color} ${cpu cpu13}%
+${color0}${cpugraph cpu5 10,230 FFFFFF FFFFFF -l}${alignr}${offset -25}${color0}${cpugraph cpu13 10,230 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 6:${color} ${cpu cpu6}%${alignr}${color0}CPU Core 14: ${color} ${cpu cpu14}%
-    ${color0}${cpugraph cpu6 10,236 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu14 10,236 FFFFFF FFFFFF -l}
+${color0}CPU Core 6:${color} ${cpu cpu6}%${alignr}${offset -25}${color0}CPU Core 14: ${color} ${cpu cpu14}%
+${color0}${cpugraph cpu6 10,230 FFFFFF FFFFFF -l}${alignr}${offset -25}${color0}${cpugraph cpu14 10,230 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 7:${color} ${cpu cpu7}%${alignr}${color0}CPU Core 15: ${color} ${cpu cpu15}%
-    ${color0}${cpugraph cpu7 10,236 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu15 10,236 FFFFFF FFFFFF -l}
+${color0}CPU Core 7:${color} ${cpu cpu7}%${alignr}${offset -25}${color0}CPU Core 15: ${color} ${cpu cpu15}%
+${color0}${cpugraph cpu7 10,230 FFFFFF FFFFFF -l}${alignr}${offset -25}${color0}${cpugraph cpu15 10,230 FFFFFF FFFFFF -l}
 
-    ${color0}CPU Core 8:${color} ${cpu cpu8}%${alignr}${color0}CPU Core 16: ${color} ${cpu cpu16}%
-    ${color0}${cpugraph cpu8 10,236 FFFFFF FFFFFF -l}${alignr}${color0}${cpugraph cpu16 10,236 FFFFFF FFFFFF -l}
+${color0}CPU Core 8:${color} ${cpu cpu8}%${alignr}${offset -25}${color0}CPU Core 16: ${color} ${cpu cpu16}%
+${color0}${cpugraph cpu8 10,230 FFFFFF FFFFFF -l}${alignr}${offset -25}${color0}${cpugraph cpu16 10,230 FFFFFF FFFFFF -l}
 
+${color0}RAM: $color$memperc%${alignr}${offset -25}$mem${color0} / ${color}$memmax
+${color0}${membar 6,475}
 
-    ${color0}RAM: $color$memperc%$alignr$mem${color0} / ${color}$memmax
-    ${color0}${membar 6,486}
+${color0}Downspeed: $color${downspeed enp4s0}${alignr}${offset -25}Total Down: ${totaldown enp4s0}
+${color0}${downspeedgraph enp4s0 20,475 FFFFFF FFFFFF}
 
-    ${color0}Downspeed: $color${downspeed enp4s0}$alignr Totaldown: ${totaldown enp4s0}
-    ${color0}${downspeedgraph enp4s0 20,486 FFFFFF FFFFFF}
+${color0}Upspeed:   $color${upspeed enp4s0}${alignr}${offset -25}Total Up: ${totalup enp4s0}
+${color0}${upspeedgraph enp4s0 20,475 FFFFFF FFFFFF}
 
-    ${color0}Upspeed:   $color${upspeed enp4s0}$alignr Totalup: ${totalup enp4s0}
-    ${color0}${upspeedgraph enp4s0 20,486 FFFFFF FFFFFF}
+${color0}/${alignr}${offset -25}${color}${fs_used /}${color0} / $color${fs_size /}
+${color0}${fs_bar 6,475 /}
 
-    ${color0}/$alignr$color${fs_used /}${color0} / $color${fs_size /}
-    ${color0}${fs_bar 6,486 /}
+${color0}/mnt/data${alignr}${offset -25}${color}${fs_used /mnt/data}${color0} / $color${fs_size /mnt/data}
+${color0}${fs_bar 6,475 /mnt/data}
 
-    ${color0}/mnt/data$alignr$color${fs_used /mnt/data}${color0} / $color${fs_size /mnt/data}
-    ${color0}${fs_bar 6,486 /mnt/data}
+${color0}/mnt/system11${alignr}${offset -25}${color}${fs_used /mnt/system11}${color0} / $color${fs_size /mnt/system11}
+${color0}${fs_bar 6,475 /mnt/system11}
 
-    ${color0}/mnt/data10$alignr$color${fs_used /mnt/data10}${color0} / $color${fs_size /mnt/data10}
-    ${color0}${fs_bar 6,486 /mnt/data10}
+${color0}/mnt/data11${alignr}${offset -25}${color}${fs_used /mnt/data11}${color0} / $color${fs_size /mnt/data11}
+${color0}${fs_bar 6,475 /mnt/data11}
 
-    ${color0}/mnt/storage$alignr$color${exec df /mnt/storage/Backups -H | awk '/192.168/{print $3}'}${color0} / $color${exec df /mnt/storage/Backups -H | awk '/192.168/{print $2}'}
-    ${color0}${fs_bar 6,486 /mnt/storage/Backups}
+${color0}/mnt/storage${alignr}${offset -25}${color}${exec df /mnt/storage/Backups -H | awk '/192.168/{print $3}'}${color0} / $color${exec df /mnt/storage/Backups -H | awk '/192.168/{print $2}'}
+${color0}${fs_bar 6,475 /mnt/storage/Backups}
 
-    ${color0}Read: $color${diskio_read}$alignr${color0}Write: $color${diskio_write}
-    ${color0}${diskiograph 20,486 FFFFFF FFFFFF}
+${color0}Read: ${color}${diskio_read}${alignr}${offset -25}${color0}Write: $color${diskio_write}
+${color0}${diskiograph 20,475 FFFFFF FFFFFF}
 
-    ${color0}${font :BOLD:size=10}CPU Top:${font :size=9}${alignr}%
+${color0}${font :BOLD:size=10}CPU Top:${font :size=9}
 
-    $color${top name 1}$alignr${top cpu 1}
-    $color${top name 2}$alignr${top cpu 2}
-    $color${top name 3}$alignr${top cpu 3}
-    $color${top name 4}$alignr${top cpu 4}
-    $color${top name 5}$alignr${top cpu 5}
-    $color${top name 6}$alignr${top cpu 6}
+$color${top name 1}${alignr}${offset -25}${top cpu 1}%
+$color${top name 2}${alignr}${offset -25}${top cpu 2}%
+$color${top name 3}${alignr}${offset -25}${top cpu 3}%
+$color${top name 4}${alignr}${offset -25}${top cpu 4}%
+$color${top name 5}${alignr}${offset -25}${top cpu 5}%
 
-    ${color0}${font :BOLD:size=10}RAM Top:${font :size=9}${alignr}
+${color0}${font :BOLD:size=10}RAM Top:${font : size=9}
 
-    $color${top_mem name 1}$alignr${top_mem mem_res 1}
-    $color${top_mem name 2}$alignr${top_mem mem_res 2}
-    $color${top_mem name 3}$alignr${top_mem mem_res 3}
-    $color${top_mem name 4}$alignr${top_mem mem_res 4}
-    $color${top_mem name 5}$alignr${top_mem mem_res 5}
-    $color${top_mem name 6}$alignr${top_mem mem_res 6}
+$color${top_mem name 1}${alignr}${offset -25}${top_mem mem_res 1}
+$color${top_mem name 2}${alignr}${offset -25}${top_mem mem_res 2}
+$color${top_mem name 3}${alignr}${offset -25}${top_mem mem_res 3}
+$color${top_mem name 4}${alignr}${offset -25}${top_mem mem_res 4}
+$color${top_mem name 5}${alignr}${offset -25}${top_mem mem_res 5}
+
 ]];

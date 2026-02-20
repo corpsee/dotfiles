@@ -5,7 +5,9 @@
 # PHP
 /composer.phar
 /composer
-/vendor
+
+# Golang
+# /vendor
 
 # Logs
 *.log
